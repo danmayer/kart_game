@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- based on original work from http://thelab.thingsinjars.com/CSSKart/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Super Mario Kart CSS</title>
+    <style>
+    html, body {background:#008000;color:white;width:100%;height:100%;}
+    #map {
+      width:1024px;height:1025px;
+      position:absolute;top:0;left:0;
+      background:url(SuperMarioKartMapMushroomCup1.png); /* The map */
+			z-index: 1;
+    }
+    #cart {
+      position:absolute;
+      top:510px;left:512px; /* Position exactly half-way down and half-along the map */
+      width:58px;height:78px;margin-left:-29px;margin-top:-39px;
+      background:url(cart.png);
+      background-size:522px; /* Stretching the sprite to make it bigger */
+      background-position:50%;
+      background-repeat: no-repeat;
+			z-index: 2;
+    }
+    #sky, #trees {
+      position:absolute;
+      top:0;left:0;
+      width:100%;
+      height:200px;
+      background:url(bg.png);
+      background-size: cover;
+			z-index: 2;
+    }
+    #trees {background-image:url(trees.png);}
+    </style>
+  </head>
+  <body>
+    <div id="map" style="-webkit-transform: scaleX(7) scaleY(3) perspective(1000) rotateX(65deg) rotateZ(35deg) translate3d(-425.7762694439139px, -103.3324148039313px, -10px); "></div>
+    <div id="cart" style="background-position-x: -232px; "></div>
+    <div id="sky"></div>
+    <div id="trees" style="background-position: -9.722222222222223% 50%; "></div>
+    <script src="full.js"></script>
+    <script src="app.js"></script>
+
+</body></html>
